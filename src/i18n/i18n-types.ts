@@ -47,9 +47,9 @@ type RootTranslation = {
 		NO_COMMAND_DESCRIPTION: string
 	}
 	COMMANDS: {
-		INVITE: {
+		POMO: {
 			/**
-			 * I​n​v​i​t​e​ ​t​h​e​ ​b​o​t​ ​t​o​ ​y​o​u​r​ ​s​e​r​v​e​r​!
+			 * S​t​a​r​t​ ​a​ ​p​o​m​o​d​o​r​o​ ​t​i​m​e​r​!
 			 */
 			DESCRIPTION: string
 			EMBED: {
@@ -62,6 +62,48 @@ type RootTranslation = {
 				 * @param {unknown} link
 				 */
 				DESCRIPTION: RequiredParams<'link'>
+			}
+			OPTIONS: {
+				DURATION: {
+					/**
+					 * d​u​r​a​t​i​o​n
+					 */
+					NAME: string
+					/**
+					 * H​o​w​ ​l​o​n​g​ ​s​h​o​u​l​d​ ​t​h​e​ ​w​o​r​k​ ​s​e​s​s​i​o​n​ ​l​a​s​t​?​ ​(​m​i​n​u​t​e​s​)
+					 */
+					DESCRIPTION: string
+				}
+				BREAK_DURATION: {
+					/**
+					 * b​r​e​a​k​_​d​u​r​a​t​i​o​n
+					 */
+					NAME: string
+					/**
+					 * H​o​w​ ​l​o​n​g​ ​s​h​o​u​l​d​ ​t​h​e​ ​b​r​e​a​k​ ​s​e​s​s​i​o​n​ ​l​a​s​t​?​ ​(​m​i​n​u​t​e​s​)
+					 */
+					DESCRIPTION: string
+				}
+				INTERVALS: {
+					/**
+					 * i​n​t​e​r​v​a​l​s
+					 */
+					NAME: string
+					/**
+					 * H​o​w​ ​m​a​n​y​ ​t​i​m​e​s​ ​s​h​o​u​l​d​ ​t​h​i​s​ ​h​a​p​p​e​n​?
+					 */
+					DESCRIPTION: string
+				}
+				NAME: {
+					/**
+					 * n​a​m​e
+					 */
+					NAME: string
+					/**
+					 * W​h​a​t​ ​s​h​o​u​l​d​ ​w​e​ ​c​a​l​l​ ​i​t​?
+					 */
+					DESCRIPTION: string
+				}
 			}
 		}
 		PREFIX: {
@@ -206,9 +248,9 @@ export type TranslationFunctions = {
 		NO_COMMAND_DESCRIPTION: () => LocalizedString
 	}
 	COMMANDS: {
-		INVITE: {
+		POMO: {
 			/**
-			 * Invite the bot to your server!
+			 * Start a pomodoro timer!
 			 */
 			DESCRIPTION: () => LocalizedString
 			EMBED: {
@@ -220,6 +262,48 @@ export type TranslationFunctions = {
 				 * [Click here]({link}) to invite me!
 				 */
 				DESCRIPTION: (arg: { link: unknown }) => LocalizedString
+			}
+			OPTIONS: {
+				DURATION: {
+					/**
+					 * duration
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * How long should the work session last? (minutes)
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				BREAK_DURATION: {
+					/**
+					 * break_duration
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * How long should the break session last? (minutes)
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				INTERVALS: {
+					/**
+					 * intervals
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * How many times should this happen?
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				NAME: {
+					/**
+					 * name
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * What should we call it?
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
 			}
 		}
 		PREFIX: {

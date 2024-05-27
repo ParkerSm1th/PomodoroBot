@@ -15,11 +15,29 @@ const en = {
 		NO_COMMAND_DESCRIPTION: 'No description provided.',
 	},
 	COMMANDS: {
-		INVITE: {
-			DESCRIPTION: 'Invite the bot to your server!',
+		POMO: {
+			DESCRIPTION: 'Start a pomodoro timer!',
 			EMBED: {
 				TITLE: 'Invite me on your server!',
 				DESCRIPTION: '[Click here]({link}) to invite me!',
+			},
+			OPTIONS: {
+				DURATION: {
+					NAME: 'duration',
+					DESCRIPTION: 'How long should the work session last? (minutes)',
+				},
+				BREAK_DURATION: {
+					NAME: 'break_duration',
+					DESCRIPTION: 'How long should the break session last? (minutes)',
+				},
+				INTERVALS: {
+					NAME: 'intervals',
+					DESCRIPTION: 'How many times should this happen?',
+				},
+				NAME: {
+					NAME: 'name',
+					DESCRIPTION: 'What should we call it?',
+				},
 			},
 		},
 		PREFIX: {
